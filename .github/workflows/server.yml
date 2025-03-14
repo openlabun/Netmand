@@ -20,7 +20,7 @@ jobs:
           cd /home/proyecto/Netmand/
           git pull origin main
           git status
-          docker stop netmand-app
-          docker rm netmand-app
-          docker build -t netmand .
-          docker run -dit -p 5015:3000 --restart unless-stopped --name netmand netmand
+          docker stop netmand
+          docker rm netmand
+          docker build -t netmand-image .
+          docker run -dit -p 5015:3000 --restart unless-stopped --name netmand netmand-image
