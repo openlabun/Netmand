@@ -23,4 +23,4 @@ jobs:
           docker stop netmand-app
           docker rm netmand-app
           docker build -t netmand .
-          docker run -dit -p 5015:3000 --restart unless-stopped --name netmand-app netmand
+          docker run -dit -p 5015:3000 --restart unless-stopped --name netmand netmand
